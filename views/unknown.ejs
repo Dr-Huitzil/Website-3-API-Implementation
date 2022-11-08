@@ -1,0 +1,46 @@
+<%- include("partials/header.ejs") %>
+<form method="GET" action="/unknown">
+  <section class = "theHeader">
+    
+  <h1> Click the Button</h1>
+  <h6>for a really cool animal </h6>
+    
+  <input type="submit" id = "submit">
+  </form>
+ 
+</section>
+
+
+  <section class = "imageBody">    
+    <div class="animalContainer">
+      
+    <div class="imgcontainer">
+      <img id="animalPic" src="<%=data.image_link%>">
+    </div>
+
+    <div class = "animalInfo">
+    <h2>Animal Type</h2>  
+      <p>
+        <%=data.animal_type%>
+      </p>
+       
+    <h2>Animal Name</h2>
+      <p>
+        <%=data.name%>
+      </p>
+      
+    <h2>Latin Name</h2>  
+      <p>
+        <%=data.latin_name%>
+      </p>
+
+    <h2> Diet </h2>
+      <p>
+        <%=data.diet%>
+      </p>
+    </div>
+    
+    </div>
+  </section>
+</body>
+</html>

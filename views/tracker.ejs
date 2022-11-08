@@ -1,0 +1,64 @@
+<%- include("partials/header.ejs") %>
+  
+<form method="GET" action="/tracker">
+  <section class = "theHeader">
+    <h1> Type in a location </h1>
+    <h6>to track something</h6>
+    
+    <div class="inputs">
+      <input type="text" name="location" placeholder="type in a location">
+      <input type="submit">
+    </div>
+  </section>
+</form>
+
+<section class="theInfo">
+  <div id="map"></div>
+    
+  <div class="infocontainer">
+    <div class="first">
+      <h2>Place of the Encounter</h2>
+      <p>
+        <%=randomCase.locationName%>
+      </p>
+    </div>
+    
+    <div class="first">
+      <h2>Type of Sighting</h2>
+      <p>
+        <%=randomCase.type%>
+      </p>
+    </div>
+
+    <div class="summary">
+    <h2>Summary of the Encounter</h2>
+    <p>
+      <%=randomCase.detailedDescription%>
+    </p>
+    </div>
+  </div>
+</section>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeDij-F2lHlLV26Rw946tR-3CNQDURVRQ&callback=initMap"></script>
+    <script>
+      function initMap() {
+        // The location of encounter
+        var randomCaseLocation = {
+          lat: <%= randomCase.latitude %>,
+          lng: <%= randomCase.longitude %>
+        };
+        // The map, centered at encounter
+        var map = new google.maps.Map(
+          document.getElementById('map'), {
+            zoom: 4,
+            center: randomCaseLocation
+          });
+        // The marker, positioned at encounter
+        var marker = new google.maps.Marker({
+          position: randomCaseLocation,
+          map: map
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+/* navigation Links */
+nav{
+  background-color: teal;
+  color: white;
+  hover: 
+}
+.nav-links{
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+}
+.nav-links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+  width: 100%;
+}
+
+/* the header */
+.theHeader{
+  text-align: center;
+  box-shadow: 5px 10px;
+  border: 5px solid black;
+  background-color: rgba(0,0,0,0.60);
+  color:white;
+}
+#submit{
+  margin: 10px 0px 10px 0px;
+}
+
+/* the picture container*/
+.animalContainer{
+  text-align: center; 
+  position: relative;
+  height: 510px;
+  color: white;
+}
+img{
+  width: 700px;
+  height: 500px;
+}
+.imageBody{
+  box-shadow: 5px 10px;
+  border: 5px solid black;
+  background-color: rgba(0,0,0,0.6);
+  margin: 30px;
+  padding: 20px;
+  vertical-alignment: middle;
+}
+.imageBody .imgcontainer{
+  float: left;
+  border: 2px solid black;
+}
+
+/* UFO tracker */
+.infocontainer{
+  padding: 10px;
+  text-align: center; 
+  color: #20c20e;
+}
+
+.inputs{
+  margin: 10px 10px 10px 10px;
+}
+
+.theInfo h2{
+  font-family: 'Orbitron', sans-serif;
+}
+.theInfo p{
+  font-family: 'Advent Pro', serif;
+}
+
+.first{
+  margin: 30px;
+  padding: 15px;
+  display: inline-block;
+  vertical-alignment: middle;
+  border: 5px solid black;
+  background-color: rgba(0,0,0,0.50);
+}
+.summary{
+  padding: 15px;
+  display: inline-block;
+  vertical-alignment: middle;
+  border: 5px solid black;
+  background-color: rgba(0,0,0,0.50);
+}
+
+#map{
+  height: 700px;
+  width: 100%;
+  margin-top: 30px; 
+  border: 5px solid black;
+}
+
+/* cats*/
+.catInfo{
+  margin: 30px;
+  padding: 15px;
+  display: inline-block;
+  vertical-alignment: middle;
+  border: 5px solid black;
+  background-color: rgba(0,0,0,0.50);
+  color: white;
+}
+.dogBody{
+    margin: 30px;
+  padding: 15px;
+  border: 5px solid black;
+  background-color: rgba(0,0,0,0.50);
+  color: white;
+}
+body{
+  background-image: url("iStock-641888116-1.jpg");
+}
+h2{
+  font-family: 'Shirkhand', cursive;
+}
+p{
+  font-family: 'Corben', cursive;
+}
+#pokepon{
+  width: 300px;
+  height: 300px;
+}

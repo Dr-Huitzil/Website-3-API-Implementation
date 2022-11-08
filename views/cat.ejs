@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+<form method="GET" action="/cat">
+<section class = "theHeader">
+
+    
+  <h1> Click the Button</h1>
+  <h6>for a cat</h6>
+  <input type="submit" id = "submit">
+    
+
+</section>
+  </form>
+<section class = "catStuff">
+    <div class="catInfo">
+      <h2>Name</h2>
+      <p>
+        <%=data.name%>
+      </p>
+      
+    <img src="<%=data.sprites.normal%>" id="pokepon">
+  </div>
+  
+  </div>
+</section>
+
+</body>
+</html>
